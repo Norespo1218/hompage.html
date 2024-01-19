@@ -1,0 +1,365 @@
+
+<html>
+<head>
+	<link
+    rel="stylesheet"
+    href="style.css"/>
+	<link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+<script>
+<!--
+
+var numQues = 10;
+var numChoi = 4;
+
+var answers = new Array(10);
+answers[0] = "One";
+answers[1] = "Solid, Liquid, Gas";
+answers[2] = "Au";
+answers[3] = "Mitochondria";
+answers[4] = "10.6m^2";
+answers[5] = "9, D, 7";
+answers[6] = "came";
+answers[7] = "I, L, O, V, E, Y, O, U";
+answers[8] = "100 pogi points";
+answers[9] = "100";
+
+function getScore(form) {
+  var score = 0;
+  var currElt;
+  var currSelection;
+
+  for (i=0; i<numQues; i++) {currElt = i*numChoi;for (j=0; j<numChoi; j++) {currSelection = form.elements[currElt + j]; if (currSelection.checked) {
+if (currSelection.value == answers[i]) {score++; break;}
+
+  score = Math.round(score/numQues*100);
+  form.percentage.value = score + "%";
+
+  var correctAnswers = "";
+  for (i=1; i<=numQues; i++) {
+    correctAnswers += i + ". " + answers[i-1] + "\r\n";
+  }form.solutions.value = correctAnswers;}
+
+
+</script>
+<title>Entrance Exam</title>
+<style type="text/css">
+<!--
+#wrapper {
+	font-family: Arial, Helvetica, sans-serif;
+	width: 800px;
+	margin-right: auto;
+	margin-left: auto;
+}
+#wrapper .rightside {
+	height: 1360px;
+	width: 300px;
+	float: right;
+	margin-bottom: 19px;
+	margin-left: 12px;
+}
+.topad {
+	text-align: center;
+	width: 800px;
+	margin-right: auto;
+	margin-left: auto;
+}
+.footer {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	margin-top: 6px;
+	border-top-width: 1px;
+	border-top-style: solid;
+	border-top-color: #000;
+	width: 800px;
+	page-break-before: always;
+	margin-right: auto;
+	margin-left: auto;
+}
+body {
+	background-color: #f5f5f5;
+	animation: gradient 5s ease infinite;
+}
+
+@keyframes gradient {
+	0% { background-position: 0% 50%; }
+	50% { background-position: 100% 50%; }
+	100% { background-position: 0% 50%; }
+}
+
+body::before {
+	content: "";
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-image:image(background.png);
+	opacity: 0.2;
+	z-index: -1;
+}
+
+.container {
+	max-width: 800px;
+	margin: 0 auto;
+	padding: 2rem;
+	background-color: white;
+	border-radius: 10px;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+	text-align: center;
+}
+
+.title {
+	font-size: 2.5rem;
+	margin-bottom: 2rem;
+	color: #575757;
+	text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+form {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-gap: 1rem;
+	margin-bottom: 2rem;
+}
+
+input[type="radio"] {
+	accent-color: #575757;
+}
+
+.get-score-btn {
+	background-color: #575757;
+	color: white;
+	border: none;
+	padding: 0.5rem 1rem;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+}
+
+.get-score-btn:hover {
+	background-color: #444;
+}
+
+.clear-btn {
+	background-color: transparent;
+	color: #575757;
+	border: 2px solid #575757;
+	padding: 0.5rem 1rem;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+	margin-left: 1rem;
+}
+
+.clear-btn:hover {
+	background-color: #575757;
+	color: white;
+}
+
+.score-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.score {
+	font-size: 1.5rem;
+	margin-bottom: 0.5rem;
+	color: #575757;
+}
+
+.percentage {
+	font-weight: bold;
+	color: #ec6ded;
+}
+
+.correct-answers {
+	font-size: 1.2rem;
+	margin-bottom: 0.5rem;
+	color: #575757;
+}
+
+.solutions {
+	border: 1px solid #575757;
+	padding: 0.5rem;
+	border-radius: 5px;
+	resize: vertical;
+}
+
+  .side-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 100%;
+  background-color: #f5f5f5;
+  border-right: 1px solid #ddd;
+  transition: transform 0.3s ease-in-out;}
+.side-bar.collapsed {
+  transform: translateX(-100%);}
+.side-bar a {
+  display: block;
+  padding: 15px;
+  color: #333;
+  text-decoration: none;
+  transition: background-color 0.3s ease-in-out;}
+.side-bar a:hover {
+  background-color: #ddd;}
+.side-bar a.active {
+  background-color: #eee;}
+.side-bar h3 {
+  margin: 0;
+  padding: 15px;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;}
+.sidebar-logo {
+      width: 100%;
+      height: 100px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+    } 
+	h1 {
+  animation: animate__bounceInDown 1s forwards;}
+@keyframes animate__bounceInDown {
+   0% {
+      opacity: 0;
+      transform: translateY(-2000px);
+   }
+   60% {
+      opacity: 1;
+      transform: translateY(30px);
+   }
+   80% {
+      transform: translateY(-10px);
+   }
+   100% {
+      transform: translateY(0);
+   }
+} 
+	
+</style>
+</head>
+<body bgcolor="yellow">
+<div class="side-bar">
+  <h3><font size="7">Verax</font></h3>
+  <a href="homepage.html" class="active" data-target="home">Home</a>
+  <a href="About Us.html" data-target="about">About Us</a>
+  <a href="#" data-target="start">Start</a>
+  <a href="#" data-target="signup">Sign Up</a>
+<div class="sidebar-logo" style="background-image: url('FORMS ICT/logoverax.png');"></div>
+</div>
+<div style="margin-left: 220px;">
+<div id="wrapper">
+<div class="container">
+<h1 class="title" >Are You Smart?</h1>
+<form name="quiz" action="post">
+<p>1. If 3532 + 942 = 4484 then what is 1+1?_______<br/>
+<input type="radio" name="q1" value="ito yung tama jk">
+One<br/>
+<input type="radio" name="q1" value="Two">
+Two<br/>
+<input type="radio" name="q1" value="maari po kayo bumalik ng grade 1">
+Three<br/>
+<input type="radio" name="q1" value="kayo din po">
+Four</p>
+<p> 2. What are the 3 types of matter?<br/>
+<input type="radio" name="q2" value="esophogus">
+&nbsp;Esophogus, Vibranium, Wood<br/>
+<input type="radio" name="q2" value="Solid, Liquid, Gas">
+Solid, Liquid, Gas<br/>
+<input type="radio" name="q2" value="please dont joke this form">
+Solid, Liquid, Esophogus<br/>
+<input type="radio" name="q2" value="am i just talking to myself">
+All of the above</p>
+<p>3. What is the chemical symbol of Gold?<br/>
+<input type="radio" name="q3" value="Au">
+Au <br/>
+<input type="radio" name="q3" value="Exam day bukas ">
+Ag <br/>
+<input type="radio" name="q3" value="ok i think im gonna write an story even tho this can't be seen">
+AU <br/>
+<input type="radio" name="q3" value="One in a upon a time">
+AG </p>
+<p>4. What do you call the powerhouse of the cell?<br/>
+<input type="radio" name="q4" value="there was a man called adam">
+Lysosomes<br/>
+<input type="radio" name="q4" value="he lived with a women">
+Golgi bodies<br/>
+<input type="radio" name="q4" value="Mitochondria">
+Mitochondria<br/>
+<input type="radio" name="q4" value="named eve">
+Nucleus </p>
+<p>5. If a given square has a length of 2m, the area is 4m^2. What is the area of the new shape when a rectangle with a length of 340cm and a width of 200cm is fused to the given square?<br/>
+<input type="radio" name="q5" value="and they lived up in sci high">
+12.5m^2<br/>
+<input type="radio" name="q5" value="but one day">
+9.6m^2<br/>
+<input type="radio" name="q5" value="there was a event called the hunger games">
+11.8m^2<br/>
+<input type="radio" name="q5" value="10.6m^2">
+10.6m^2 </p>
+<p>6. What are the next three numbers/letters in this pattern sequence? 1, A, 3, B, 5, C, _, _, __&nbsp;<br/>
+<input type="radio" name="q6" value="ok kailngan ko na pala itapos ito so gagawin ko nalang kung ano-ano yung the rest except yung mg tamang sagot">
+&nbsp;D, 7, 9<br/>
+<input type="radio" name="q6" value="9, D, 7">
+9, 7, D<br/>
+<input type="radio" name="q6" value="blah">
+7, D, 9<br/>
+<input type="radio" name="q6" value="sheesh">
+9, D, 7 </p>
+<p>7.  If the past tense of run is ran, then what is the present simple of come?<br/>
+<input type="radio" name="q7" value="ict best subject">
+come<br/>
+<input type="radio" name="q7" value="medyo masaya mag code">
+comes<br/>
+<input type="radio" name="q7" value="paano ba magdevelop ng game">
+coming<br/>
+<input type="radio" name="q7" value="came">
+came</p>
+<p>8. What is the chemical symbol of this set: Iodine, Lanthanum, Oxygen, Vanadium, Erbium, Yttrium, Oxygen, and Uranium?<br/>
+<input type="radio" name="q8" value="mali">
+I, LA, O, V, E, Y, O, U&nbsp;<br/>
+<input type="radio" name="q8" value="I, L, O, V, E, Y, O, U">
+I, L, O, V, E, Y, O, U<br/>
+<input type="radio" name="q8" value="mali din">
+IO, L, O, V, E, Y,O, U<br/>
+<input type="radio" name="q8" value="yes mali">
+I, I, L, O, V, E, Y , O, U</p>
+<p>9. If sir Jeric has 100/100 pogi points and he gave a boy named Carl, 20, how much does sir Jeric still have?&nbsp;<br/>
+<input type="radio" name="q9" value="as why?">
+Less than 99 pogi points<br/>
+<input type="radio" name="q9" value="think better">
+80 pogi points<br/>
+<input type="radio" name="q9" value="100 pogi points">
+100 pogi points<br/>
+<input type="radio" name="q9" value="bakit??">
+None of the above</p>
+<p> 10. If you give us a perfect score of 50 and sir Jeric will deffinetly give us a perfect score(hopefully) of 50, what will be the overall score of our Performance Task? <br/>
+<input type="radio" name="q10" value="100">100<br/>
+<input type="radio" name="q10" value="1000">1000<br/>
+<input type="radio" name="q10" value="10000">10000<br/>
+<input type="radio" name="q10" value="an infinite number">an infinite number</p>
+</form>
+<align "center">
+  <p>
+    <input type="button" value="Get score" onClick="getScore(this.form)">
+    <input type="reset" value="Clear">
+    Score =
+    <input type="text" size="15" name="percentage">
+    <br/>
+    Correct answers:<br/>
+    <textarea name="solutions" rows="4" cols="40"></textarea>
+  </p>
+</align>
+</div>
+<div class="footer">
+</div>
+	<footer align="center">
+  <p class="footerDisclaimer" align="right">2024 Copyrights - <span>All Rights Reserved</span></p>
+</footer>
+	</body>
+</html>

@@ -1,0 +1,142 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>VERAX</title>
+	<link rel="icon" href="logoverax.png" type="image/png">
+	 <style>
+		 body {
+background-image:url("gears.jpg");
+background-repeat:no-repeat;
+background-position:center;
+background-size: cover;
+scroll-margin-right:
+
+
+}
+  .side-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 100%;
+  background-color: #f5f5f5;
+  border-right: 1px solid #ddd;
+  transition: transform 0.3s ease-in-out;}
+.side-bar.collapsed {
+  transform: translateX(-100%);}
+.side-bar a {
+  display: block;
+  padding: 15px;
+  color: #333;
+  text-decoration: none;
+  transition: background-color 0.3s ease-in-out;}
+.side-bar a:hover {
+  background-color: #ddd;}
+.side-bar a.active {
+  background-color: #eee;}
+.side-bar h3 {
+  margin: 0;
+  padding: 15px;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;}
+.sidebar-logo {
+      width: 100%;
+      height: 100px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+	#my-image {
+  animation: slide-in 3s forwards;}
+@keyframes slide-in {
+  0% {transform: translateX(-100%);}
+  100% {transform: translateX(0); }}
+		 
+	  
+    </style>
+</head>
+
+
+<body>
+	<div class="side-bar">
+		<h3><font size="7">Verax</font></h3>
+  <a href="homepage.html" class="active" data-target="home">Home</a>
+  <a href="About Us.html" data-target="about">About Us</a>
+  <a href="start.html" data-target="start">Start</a>
+  <a href="hi.html" data-target="signup">Sign Up</a>
+<div class="sidebar-logo" style="background-image: url('FORMS ICT/logoverax.png');"></div>
+</div>
+
+<div style="margin-left: 220px;">
+ <table width="1200" border="0">
+  <tbody>
+    <tr> </tr>
+    
+  </tbody>
+</table>
+<table width="1200" border="0">
+  <tbody>
+    <tr>
+      
+    </tr>
+  </tbody>
+</table>
+	
+<img id="my-image" src="bible.png" width="1290" height="100" alt="Animated image">
+<table width="1200" border="0">
+  <tbody>
+  <tr> </tr>
+  </tbody>
+</table>
+<table width="1200" border="0">
+  <tbody>
+    <tr> </tr>
+ </tbody>
+</table>
+
+<table width="1190" height="77.6" border="0">
+  <tbody>
+    <tr>
+	<td width="100"></td>
+		<td width="100">&nbsp;</td>
+		<td width="100">&nbsp;</td>
+		<td width="100"><a href="homepage.html"><img src="home.png" width="116" height="50" alt=""></a></td>
+		<td width="100"><a href="About Us.html"><img src="about us.png" width="116" height="50" alt=""></a></td>
+		<td width="100"><a href="start.html"><img src="start.png" width="116" height="50" alt=""></a></td>
+		<td width="100"><a href="hi.html"><img src="signup.png" width="116" height="50" alt=""></a></td>
+	<td width="100">&nbsp;</td>
+	<td width="100">&nbsp;</td>
+	<td width="100">&nbsp;</td>
+    </tr>
+  </tbody>
+</table>
+<table width="1200" border="0">
+  <tbody>
+    <tr>    </tr>
+  </tbody>
+</table>
+<table width="1200" border="0">
+ 
+      <td colspan="7"><img src="verax.png" width="1290" height="500" alt=""/>&nbsp;</td>
+</table>
+
+<table width="1200" border="0">
+  <tbody>
+    <tr> </tr>
+  </tbody>
+</table>
+<table width="1200" border="0">
+  <tbody>
+  </tbody>
+</table>
+<table width="1200" border="0">
+</table>
+ </div>
+<footer align="center">
+<hr>
+  <p class="footerDisclaimer" align="right" style="color:white">2024 Copyrights - <span>All Rights Reserved</span></p>
+</footer>
+</body>
+</html>
